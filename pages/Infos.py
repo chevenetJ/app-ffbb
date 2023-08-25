@@ -76,7 +76,7 @@ with cont :
     body = txt
     sender_email = "jules.chevenet.pro@gmail.com"
     receiver_email = "jules.chevenet.pro@gmail.com"
-    #password = st.secrets["gmail_password"]
+    password = st.secrets["gmail_password"]
 
     message = MIMEMultipart()
     message["From"] = sender_email
@@ -90,8 +90,8 @@ with cont :
     go = st.button("envoyer le mail")
     if go :
         context = ssl.create_default_context()
-        #with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-            #server.login(sender_email, password)
-            #server.sendmail(sender_email, receiver_email, text)
-        #st.balloons()
-    st.write("Ou envoyer un mail personnel à l'adresse jules.chevenet.pro@gmail.com")
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+            server.login(sender_email, password)
+            server.sendmail(sender_email, receiver_email, text)
+        st.balloons()
+    st.write("Ou envoyez un mail personnel à l'adresse jules.chevenet.pro@gmail.com")
