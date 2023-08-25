@@ -6,6 +6,14 @@ from PIL import Image
 from io import BytesIO
 from datetime import datetime as dt
 
+st.set_page_config(page_title="Projet FFBB", initial_sidebar_state="collapsed")
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
+
 #st.session_state
 
 pd_matchs, pd_players, pd_matchs_players, pd_matchs_players_score, pd_matchs_players_noScore = init_data()
@@ -213,12 +221,12 @@ with viz :
             st.write("")
             st.write("")
 
-            ord = st.radio("Axe des ordonées : ", ["Points", "Nombre de match", 'Max points', 'Moyenne points'])
+            ord = st.radio("Axe des ordonnée : ", ["Points", "Nombre de match", 'Max points', 'Moyenne points'])
 
             st.write("")
             st.write("")
 
-            abs = st.radio('Axe des absices : ', ['Année', 'Type de match', 'Adversaire',"Compétition"])
+            abs = st.radio('Axe des abscisse : ', ['Année', 'Type de match', 'Adversaire',"Compétition"])
 
 
         with CD2:
