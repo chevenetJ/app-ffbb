@@ -160,7 +160,7 @@ with rch_adv:
                     st.write('Lieu :', st.session_state["place"])
 
     with RAB_c1 :
-        st.write('Nombre de joueurs :')
+        #st.write('Nombre de joueurs :')
         st.write(str())
         st.button('Effacer les filtres', on_click=reset_filter)
 
