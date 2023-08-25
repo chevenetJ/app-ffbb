@@ -2,3 +2,4 @@ streamlit
 plotly==5.15.0
 plotly-express
 wikipedia-api
+beautifulsoup4
