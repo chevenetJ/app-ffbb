@@ -7,7 +7,7 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-st.set_page_config(page_title="Projet FFBB", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="Projet FFBB")#, initial_sidebar_state="collapsed")
 
 class Tweet(object):
     def __init__(self, s, embed_str=False):
